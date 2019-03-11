@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Extending_arrays
 {
@@ -32,8 +33,42 @@ namespace Extending_arrays
 
             Console.ReadLine();
 
+            var largerThan2 =
+            from number in apple
+            where number > 2
+            select number;
+
+            Console.WriteLine(largerThan2);
+
+            double[] arrayEven = new double[largerThan2.Count()];
+            int z = 0;
+            foreach (var x in largerThan2)
+            {
+                arrayEven[z] = x;
+                z++;
+            }
 
 
+
+            Display(arrayEven);
+
+            int[] arr1 = new int[size];
+
+            Display(arr1);
+
+            Console.WriteLine("\nQuestion 2 complete, press ENTER to continue....");
+            Console.ReadLine();
+
+
+
+        }
+
+        static void Display<T>(T[] arr)
+        {
+            foreach(var x in arr)
+            {
+                Console.WriteLine(x);
+            }
         }
     }
 }
