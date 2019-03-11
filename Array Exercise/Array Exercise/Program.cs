@@ -8,16 +8,16 @@ namespace Array_Exercise
         {
             int size = 1000;
             Random rand = new Random();
-            int[] numbers = new int[size];
+            //int[] numbers = new int[size];
             double[] Doublenumbers = new double[size];
 
             Console.WriteLine("Integers\t\tDoubles");
 
-            for (int i = 0; i < numbers.Length; i++)
+            for (int i = 0; i < Doublenumbers.Length; i++)
             {
-                numbers[i] = rand.Next(1000, 10000);
-                Doublenumbers[i] = rand.NextDouble() * 10;
-                Console.WriteLine(numbers[i] + "\t\t" + Doublenumbers[i]);
+                //numbers[i] = rand.Next(1000, 10000);
+                Doublenumbers[i] = Math.Round((rand.NextDouble() * 10),3);
+                Console.WriteLine(Doublenumbers[i]);
                 
 
                
